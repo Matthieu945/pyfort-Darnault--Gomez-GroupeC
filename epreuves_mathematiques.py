@@ -40,14 +40,26 @@ def epreuve_math_equation() :
 #Épreuve des nombres premiers
 
 def est_premier(n) :
-    n = int(input("saisir une valeur : "))
-    for i in range (2, n**2) :
+    if n <= 1 :
+        return False
+    for i in range (2, (n**2) + 1) :
         if n% i == 0 :
-            print("n'est pas premier")
-    else :
-        print("est premier")
+            return False
+    return True
+
 
 def premier_plus_proche(n) :
-    for i in range (2, n**2) :
-        if n% i == 0 :
-            print("1")
+    while not est_premier(n) :
+        n += 1
+    return n
+
+def epreuve_math_premier() :
+    a = random.randint(10,20)
+    print("Quel est le nombre premier le plus proche de ", a, "?")
+    b = int(input("Votre réponse :"))
+    if b == premier_plus_proche(a):
+        print("Bravo ! Vous gagnez une clé.")
+        return True
+    else :
+        print("Raté ! Vous ne gagnez pas de clé.")
+        return False
