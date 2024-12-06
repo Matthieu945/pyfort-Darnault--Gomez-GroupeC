@@ -2,7 +2,7 @@ import random
 from traceback import print_tb
 
 
-def bonnetau():
+def bonneteau():
 
     l = ("A","B","C")
     tentative = 2
