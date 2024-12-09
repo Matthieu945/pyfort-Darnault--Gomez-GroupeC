@@ -42,7 +42,7 @@ def epreuve_math_equation() :
 def est_premier(n) :
     if n <= 1 :
         return False
-    for i in range (2, (n**2) + 1) :
+    for i in range (2, int((n**0.5)) + 1) :
         if n% i == 0 :
             return False
     return True
@@ -63,3 +63,59 @@ def epreuve_math_premier() :
     else :
         print("Raté ! Vous ne gagnez pas de clé.")
         return False
+
+
+# Épreuve de la roulette
+
+def epreuve_roulette_mathematique() :
+    random.seed(2)
+    L = []
+    a = random.randint(1,20)
+    L.append(a)
+    b = random.randint(1,20)
+    L.append(b)
+    c = random.randint(1,20)
+    L.append(c)
+    d = random.randint(1,20)
+    L.append(d)
+    e = random.randint(1,20)
+    L.append(e)
+    print("Nombres sur la roulette : ", L)
+    operation = ['addition', 'soustraction', 'multiplication']
+    operation_aleatoire = random.choice(operation)
+    print("Calculez le résultat en combinant ces nombres avec une", operation_aleatoire)
+    if operation_aleatoire == 'addition' :
+        somme = a + b + c + d + e
+        reponse = int(input("Votre réponse :"))
+        if reponse == somme :
+            print("Bravo ! Vous gagnez une clé.")
+            return True
+        else :
+            print("Raté ! Vous ne gagnez pas de clé.")
+            return False
+    if operation_aleatoire == "soustraction" :
+        difference = - a - b - c - d - e
+        reponse = int(input("Votre réponse :"))
+        if reponse == difference :
+            print("Bravo ! Vous gagnez une clé.")
+            return True
+        else:
+            print("Raté ! Vous ne gagnez pas de clé.")
+            return False
+    if operation_aleatoire == "multiplication":
+        produit = a * b * c * d * e
+        reponse = int(input("Votre réponse :"))
+        if reponse == produit :
+            print("Bravo ! Vous gagnez une clé.")
+            return True
+        else:
+            print("Raté ! Vous ne gagnez pas de clé.")
+            return False
+
+
+
+
+
+
+
+
