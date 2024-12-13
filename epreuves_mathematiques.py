@@ -112,6 +112,15 @@ def epreuve_roulette_mathematique() :
             print("Raté ! Vous ne gagnez pas de clé.")
             return False
 
+#Épreuve maths
+
+def epreuve_math() :
+    epreuves = [epreuve_math_factorielle, epreuve_math_premier, epreuve_math_equation, epreuve_roulette_mathematique]
+    epreuve = random.choice(epreuves)
+    return epreuve
+
+
+
 
 
 
