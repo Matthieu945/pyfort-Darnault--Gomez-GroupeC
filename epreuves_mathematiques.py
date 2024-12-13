@@ -68,49 +68,30 @@ def epreuve_math_premier() :
 # Épreuve de la roulette
 
 def epreuve_roulette_mathematique() :
-    random.seed(2)
-    L = []
-    a = random.randint(1,20)
-    L.append(a)
-    b = random.randint(1,20)
-    L.append(b)
-    c = random.randint(1,20)
-    L.append(c)
-    d = random.randint(1,20)
-    L.append(d)
-    e = random.randint(1,20)
-    L.append(e)
-    print("Nombres sur la roulette : ", L)
+    nombres = [random.randint(1, 20) for _ in range(5)]
+    print("Nombres sur la roulette :", nombres)
     operation = ['addition', 'soustraction', 'multiplication']
     operation_aleatoire = random.choice(operation)
-    print("Calculez le résultat en combinant ces nombres avec une", operation_aleatoire)
+    print(f"Calculez le résultat en combinant ces nombres avec une {operation_aleatoire}.")
     if operation_aleatoire == 'addition' :
-        somme = a + b + c + d + e
-        reponse = int(input("Votre réponse :"))
-        if reponse == somme :
-            print("Bravo ! Vous gagnez une clé.")
-            return True
-        else :
-            print("Raté ! Vous ne gagnez pas de clé.")
-            return False
+        reponse = 0
+        for i in range(len(nombres)) :
+            reponse += nombres[i]
     if operation_aleatoire == "soustraction" :
-        difference = - a - b - c - d - e
-        reponse = int(input("Votre réponse :"))
-        if reponse == difference :
-            print("Bravo ! Vous gagnez une clé.")
-            return True
-        else:
-            print("Raté ! Vous ne gagnez pas de clé.")
-            return False
+        reponse = 0
+        for i in range(len(nombres)) :
+            reponse -= nombres[i]
     if operation_aleatoire == "multiplication":
-        produit = a * b * c * d * e
-        reponse = int(input("Votre réponse :"))
-        if reponse == produit :
-            print("Bravo ! Vous gagnez une clé.")
-            return True
-        else:
-            print("Raté ! Vous ne gagnez pas de clé.")
-            return False
+        reponse = 1
+        for i in range(len(nombres)) :
+            reponse *= nombres[i]
+    reponse_joueur = int(input("Votre réponse :"))
+    if reponse_joueur == reponse :
+        print("Bravo ! Vous gagnez une clé.")
+        return True
+    else:
+        print("Raté ! Vous ne gagnez pas de clé.")
+        return False
 
 #Épreuve maths
 
