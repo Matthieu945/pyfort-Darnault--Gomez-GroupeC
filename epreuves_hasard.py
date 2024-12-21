@@ -1,7 +1,6 @@
 import random
 from traceback import print_tb
-
-
+#épreuve bonneteau
 def bonneteau():
 
     l = ("A","B","C")
@@ -25,7 +24,7 @@ def bonneteau():
     print("Vous avez perdu, la clef se trouve sous le bonneteau", gagnant,".")
     return False
 
-
+#épreuve jeu lance dés
 def jeu_lance_des():
 
     essais = 3
@@ -49,9 +48,9 @@ def jeu_lance_des():
     print("Aucun joueur n'a obtenu un 6 après trois essais, c'est un match nul")
     return False
 
-print(jeu_lance_des())
-
-
-
-
+#Choix de l'épreuve au hasard
+def epreuve_hasard():
+    jeux = [bonneteau, jeu_lance_des]
+    epreuve = random.choice(jeux)
+    return epreuve()
 
