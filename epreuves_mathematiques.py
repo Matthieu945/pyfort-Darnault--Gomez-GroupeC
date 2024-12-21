@@ -18,25 +18,6 @@ def epreuve_math_factorielle() :
         print("Raté ! Vous ne gagnez pas de clé.")
         return False
 
-#Épreuve d'équation linéaire
-
-def resoudre_equation_lineaire() :
-    a = random.randint(1, 10)
-    b = random.randint(1, 10)
-    x = round(-b/a, 2)
-    return a, b, x
-
-def epreuve_math_equation() :
-    a, b, x = resoudre_equation_lineaire()
-    print("Résoudre cette équation : {}x + {} = 0".format(a, b))
-    c = float(input("x = "))
-    if c == x :
-        print("Bravo ! Vous gagnez une clé.")
-        return True
-    else :
-        print("Raté ! Vous ne gagnez pas de clé.")
-        return False
-
 #Épreuve des nombres premiers
 
 def est_premier(n) :
@@ -96,11 +77,9 @@ def epreuve_roulette_mathematique() :
 #Épreuve maths
 
 def epreuve_math() :
-    epreuves = [epreuve_math_factorielle, epreuve_math_premier, epreuve_math_equation, epreuve_roulette_mathematique]
+    epreuves = [epreuve_math_factorielle, epreuve_math_premier, epreuve_roulette_mathematique]
     epreuve = random.choice(epreuves)
-    return epreuve
-
-
+    return epreuve()
 
 
 
