@@ -54,3 +54,4 @@ def epreuve_hasard():
     epreuve = random.choice(jeux)
     return epreuve()
 
+
