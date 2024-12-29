@@ -55,3 +55,4 @@ def epreuve_hasard():
     return epreuve()
 
 
+epreuve_hasard()

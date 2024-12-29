@@ -21,14 +21,14 @@ def enigme_pere_fouras(enigmes) :
     print(enigme_aleatoire)
     essai = 3
     print("Vous avez le droit à trois essais.")
-    while essai > 1 :
-        resultat_joueur = input("Votre réponse :")
+    while essai > 0 :
+        resultat_joueur = input("Votre réponse : ")
         if resultat_joueur.lower() == reponse_attendue.lower() :
             print("Bonne réponse ! Vous gagnez une clé.")
             return True
         else :
             print("Mauvaise réponse. Il vous reste encore", essai - 1, "essai(s).")
-            essai = essai - 1
+            essai -= 1
     if essai == 0 :
         print(f"Vous avez perdu. La solution était {reponse_attendue.lower()}. Vous ne gagnez pas de clé.")
     return False
