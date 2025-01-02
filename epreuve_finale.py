@@ -19,10 +19,10 @@ def salle_De_Tresor(fichier) :
     for indices in emission["Indices"] :
         liste_indices.append(indices)
         mot_code = emission["MOT-CODE"]
-    print("Les trois premiers indices sont : '{}', '{}' et '{}'.".format(liste_indices[0].lower(),liste_indices[1].lower(),liste_indices[2].lower()))
+    print("Les quatre premiers indices sont : '{}', '{}', '{}' et '{}'.".format(liste_indices[0].lower(),liste_indices[1].lower(),liste_indices[2].lower(),liste_indices[3].lower()))
     print("Vous avez le droit à trois tentatives pour essayer de trouver le mot-clé.")
     essai = 3
-    i = 3
+    i = 4
     while essai > 0 :
         print("Vous avez encore", essai, "tentatives.")
         reponse_joueur = input("Votre réponse : ")
@@ -33,7 +33,7 @@ def salle_De_Tresor(fichier) :
         else :
             if essai > 0 :
                 print("Raté ! Mais vous avez le droit à un indice supplémentaire.")
-                print("Indice supplémentaire : {}.".format(liste_indices[i].lower()))
+                print("Indice supplémentaire : '{}'.".format(liste_indices[i].lower()))
                 i += 1
             if essai == 0 :
                 print("C'est définitivement perdu ! Le mot-clé était '{}'.".format(mot_code.lower()))
