@@ -20,4 +20,7 @@ def affiche_grille(grille, message):
         print( )
     print("-"*13)
 
+verif de push
+
+
 
