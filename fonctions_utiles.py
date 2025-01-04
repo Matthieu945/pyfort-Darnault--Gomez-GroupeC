@@ -9,6 +9,8 @@ def introduction():
     input("Appuyer sur 'Entrée' pour composer votre équipe.\n"
           "\n")
 
+introduction()
+
 def composer_equipe() :
     nombre_joueurs = int(input("Veuillez saisir le nombre de joueurs dans votre équipe : "))
     while nombre_joueurs <= 0 or nombre_joueurs > 3:
@@ -56,6 +58,7 @@ def composer_equipe() :
 
     return equipe
 
+equipe = composer_equipe()
 
 def menu_epreuve() :
     print("Choisissez votre epreuve en saisissant le numéro correspondant.")
@@ -83,4 +86,6 @@ def choisir_joueur(equipe):
 
 
 
-equipe = composer_equipe()
+
+menu_epreuve()
+choisir_joueur(equipe)
