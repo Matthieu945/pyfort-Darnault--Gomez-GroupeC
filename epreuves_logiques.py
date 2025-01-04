@@ -20,7 +20,20 @@ def affiche_grille(grille, message):
         print( )
     print("-"*13)
 
-verif de push
+#position sur la grille
+def demande_position():
+    condition = False
 
+    while condition == False:
 
+        ligne = int(input("Entrée le numéro de la ligne que vous voulez selectionné (entre 1 et 3): "))
+        collone = int(input("Entrée le numéro de la collone que vous voulez selectionné (entre 1 et 3): "))
+        pos = (ligne, collone)
 
+        if 1 <= ligne <=3 and 1 <= collone <= 3:
+            condition = True
+            print (pos)
+        else:
+            print ("La position n'existe pas.")
+
+def init():
