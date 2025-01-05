@@ -34,7 +34,7 @@ def enigme_pere_fouras(enigmes) :
     return False
 
 enigmes = charger_enigmes(fichier)
-enigme_pere_fouras(enigmes)
+
 
 
 
