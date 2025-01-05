@@ -22,14 +22,14 @@ def jeu():
         if epreuve_choisi == 3:
             epreuve_choisi = epreuve_hasard()
         if epreuve_choisi == 4:
-            epreuve_choisi = enigme_pere_fouras()
+            epreuve_choisi = enigme_pere_fouras(enigmes)
 
         elif epreuve_choisi == True:
-            joueur_choisi['clef_gagnees'] += 1
+            joueur_choisi['cles_gagnees'] += 1
             clef += 1
 
     print("C'est maintenant le moment de la salle des trésors !")
-    final = salle_De_Tresor()  # une fois les 3 clés obtenues -> salle tresor
+    final = salle_De_Tresor(fichier)  # une fois les 3 clés obtenues -> salle tresor
     if final == True:
         "Vous avez gagné !!!"
     else:

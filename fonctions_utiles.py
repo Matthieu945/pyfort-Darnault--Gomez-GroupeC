@@ -60,7 +60,7 @@ def composer_equipe() :
 
 
 def menu_epreuve() :
-    print("Choisissez votre epreuve en saisissant le numéro correspondant.")
+    print("\nChoisissez votre epreuve en saisissant le numéro correspondant.")
     epreuves = {1 : "Épreuve de Mathématiques", 2 : "Épreuve de logique", 3 : "Épreuve de hasard", 4 : "Énigme du Père Fouras"}
     for numero, nom in epreuves.items():
         print(f"{numero}. {nom}")
@@ -72,7 +72,7 @@ def menu_epreuve() :
 
 
 def choisir_joueur(equipe):
-    print("Sélectionnez un joueur de l'équipe pour participer à cette épreuve.")
+    print("\nSélectionnez un joueur de l'équipe pour participer à cette épreuve.")
     i = 1
 
     for joueur in equipe:
@@ -80,7 +80,7 @@ def choisir_joueur(equipe):
         i += 1
 
     joueur_choisi = int(input("Entrez le numéro du joueur : "))
-
+    print("\n")
     return equipe[joueur_choisi - 1]
 
 
