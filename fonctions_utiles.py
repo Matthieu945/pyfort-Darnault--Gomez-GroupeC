@@ -79,7 +79,7 @@ def choisir_joueur(equipe):
         print(f"{i}. {joueur['nom']} ({joueur['profession']}) - {joueur['leader']}")
         i += 1
 
-    joueur_choisi = int(input(("Entrez le numéro du joueur : ")))
+    joueur_choisi = int(input("Entrez le numéro du joueur : "))
 
     return equipe[joueur_choisi - 1]
 
